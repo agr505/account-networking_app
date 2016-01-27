@@ -1,0 +1,4 @@
+
+exports.prof= { username:'',
+                password:''
+};

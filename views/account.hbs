@@ -1,0 +1,30 @@
+<h1>{{title}}</h1>
+<p>Account Name:{{username}}</p>
+<p>{{wrong}}</p>
+<form method="post", action="/account">
+    Search profile by Username:
+    <input type="text" name="username">
+    <input type="hidden" name="button" value="0">
+    <input type="submit" value="Search">
+</form>
+<br><br>
+<form method="post", action="/account">
+    Make a New Blog Post:<br><br>
+    Name of Post:
+    <input type="text" name="blogname"><br>
+   <br>
+<textarea name="blogpost" rows="5" cols="60" wrap="hard" action="/account">
+Type your blog post here.
+</textarea>
+    <br>
+    <input type="hidden" name="button" value="2">
+    <input type="submit" value="Post Blog">
+    </form>
+<br><br>
+    <div class="form">
+        <form method="post", action="/account">
+            <input type="hidden" name="button" value="1">
+            <input type="submit" value="Log Out">
+        </form>
+
+    </div>

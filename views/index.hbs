@@ -1,0 +1,24 @@
+<h1>{{title}}</h1>
+<p>Register</p>
+<div class="form">
+    <form method="post" action="/users" >
+        username:
+        <input type="text" name="nam"><br/><br/>
+        password:
+        <input type="text" name="pass"><br/><br/>
+        job:
+        <input type="text" name="job"><br/><br/>
+        phone number:
+        <input type="text" name="pn"><br/><br/>
+        email:
+        <input type="text" name="email"><br/><br/>
+
+        <input type="submit" value="submit"><br/>
+    </form>
+
+    <form method="post" action="/users">
+    <input type="hidden" name="button" value="2">
+    <input type="submit" value="Not a new user?">
+    </form>
+
+</div>

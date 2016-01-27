@@ -1,0 +1,40 @@
+<ol class="next-navigation next-navigation--nav js-global-nav">
+	<li class="next-navigation__group next-navigation__group--sections">
+		<a class="next-navigation__link next-navigation__link--top-level" href="/" data-trackable="Home">Home</a>
+	</li>{{#each nav}}<li class="next-navigation__group next-navigation__group--sections" data-trackable="group--sections">
+		<a class="next-navigation__link next-navigation__link--top-level" href="{{href}}" data-trackable="{{name}}">{{name}}</a>
+        {{#if children}}
+        <ol class="next-navigation__group__items" data-trackable="secondary-navigation">
+            <li class="next-navigation__group__item">
+                <a class="next-navigation__link next-navigation__link--sub-level" href="{{../href}}" data-trackable="All {{../name}}">All {{../name}}</a>
+            </li>
+            {{#each children}}
+            <li class="next-navigation__group__item">
+                <a class="next-navigation__link next-navigation__link--sub-level" href="{{href}}" data-trackable="{{name}}">{{name}}</a>
+            </li>
+            {{/each}}
+        </ol>
+        {{/if}}
+	</li>{{/each}}<li class="next-navigation__group next-navigation__group--more" data-o-component="o-expander" data-trackable="group--more">
+		<a href="#next-footer__nav" class="next-navigation__link next-navigation__link--top-level js-sub-nav-toggle" data-trackable="More">
+			<span class="next-navigation__link__text--mobile">Menu</span>
+			<span class="next-navigation__link__text--desktop">More</span>
+		</a>
+		<ol class="next-navigation__group__items next-navigation__group__items--nested o-expander__content" data-trackable="secondary-navigation">
+			{{#each all}}
+			<li class="next-navigation__group__item{{#if isTopLevel}} next-navigation__group__item--top-level{{/if}}">
+				<a class="next-navigation__link next-navigation__link--sub-level next-navigation__link--sub-level-header" href="{{href}}" data-trackable="{{name}}">{{name}}</a>
+		    	{{#if children}}
+		    	<ol class="next-navigation__group__sub-items">
+		        	{{#each children}}
+		            <li class="next-navigation__group__sub-item">
+		                <a class="next-navigation__link next-navigation__link--sub-level" href="{{href}}" data-trackable="{{name}}">{{name}}</a>
+		            </li>
+		        	{{/each}}
+		    	</ol>
+		    	{{/if}}
+	    	</li>
+			{{/each}}
+		</ol>
+	</li>
+</ol>

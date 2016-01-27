@@ -1,0 +1,16 @@
+<ol class="next-navigation next-navigation--all next-navigation__group__items">
+    {{#each all}}
+    <li class="next-navigation__group__item">
+        <a class="next-navigation__link next-navigation__link--sub-level next-navigation__link--sub-level-header" href="{{href}}" data-trackable="{{name}}">{{name}}</a>
+        {{#if children}}
+        <ol class="next-navigation__group__sub-items">
+            {{#each children}}
+            <li class="next-navigation__group__sub-item">
+                <a class="next-navigation__link next-navigation__link--sub-level" href="{{href}}" data-trackable="{{name}}">{{name}}</a>
+            </li>
+            {{/each}}
+        </ol>
+        {{/if}}
+    </li>
+    {{/each}}
+</ol>
